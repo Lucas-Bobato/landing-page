@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
     <body>
+
+        <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+        <label class="close-menu-label" for="close-menu" title="Close menu"></label>
         <aside class="menu white-bg">
             <div class="main-content
             menu-content">
-                <h1> 
+                <h1 onclick="getElementById('close-menu').checked = false;"> 
                     <a href="#home">Logo</a>
                 </h1>
 
                 <nav>
-                    <ul>
+                    <ul onclick="getElementById('close-menu').checked = false;">
                         <li><a href="#intro">Intro</a></li>
                         <li><a href="#grid-one">Grid One</a></li>
                         <li><a href="#gallery">Gallery</a></li>
@@ -187,9 +190,6 @@
         <h2>O que é HTML e CSS?</h2>
         <p>HTML: linguagem de marcação utilizada para estruturar os elementos da página, como parágrafos, links, títulos, tabelas, imagens e até vídeos. CSS: linguagem de estilos utilizada para definir cores, fontes, tamanhos, posicionamento e qualquer outro valor estético para os elementos da página.</p>
         </div>
-        <div class="intro-img">
-            <img src="assets/img/javascript-not-optimized.svg" alt="Desenho de um homem segurando o logo do CSS, uma mulher empurrando a logo do Javascript e outro homem alinhando a logo do HTML.">
-        </div>
         <div class="contact-form">
             <fieldset class="form-grid">
                 <legend>Contact me</legend>
@@ -221,5 +221,7 @@
     <footer id="footer" class="white-bg">
         <p> <a rel="nofollow" target='blank' href="https://beacons.ai/lucasbobato">Feito com <span class="heart">♥</span> por Lucas Bobato</a></p>
     </footer>
+
+    <a class="back-to-top" href="#home">➤</a>
     </body>
 </html>
