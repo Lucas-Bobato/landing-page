@@ -11,17 +11,17 @@
 </head>
     <body>
 
+           <!-- Menu -->
         <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
         <label class="close-menu-label" for="close-menu" title="Close menu"></label>
         <aside class="menu white-bg">
-            <div class="main-content
-            menu-content">
-                <h1 onclick="getElementById('close-menu').checked = false;"> 
+         <div class="main-content menu-content">
+                <h1 onclick="document.getElementById('close-menu').checked = false;"> 
                     <a href="#home">Logo</a>
                 </h1>
 
                 <nav>
-                    <ul onclick="getElementById('close-menu').checked = false;">
+                    <ul onclick="document.getElementById('close-menu').checked = false;">
                         <li><a href="#intro">Intro</a></li>
                         <li><a href="#grid-one">Grid One</a></li>
                         <li><a href="#gallery">Gallery</a></li>
@@ -33,6 +33,8 @@
             </div>
         </aside>
         <div class="menu-spacing"></div>
+
+        <!-- Sections -->
         <section id="home" class="intro main-bg section">
             <div class="main-content intro-content">
                 <div class="intro-text-content">
@@ -126,7 +128,7 @@
             </div>
         </section>
 
-    <section id="pricing" class="white-bg section">
+    <section id="pricing" class="white-bg section main-content">
         <div class="main-content top3-content">
             <h2>Pricing</h2>
                 <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p>
@@ -218,10 +220,26 @@
 
 </section>
         
+    <!-- Footer -->
     <footer id="footer" class="white-bg">
-        <p> <a rel="nofollow" target='blank' href="https://beacons.ai/lucasbobato">Feito com <span class="heart">♥</span> por Lucas Bobato</a></p>
+        <p> <a href="https://beacons.ai/lucasbobato">Feito com <span class="heart">♥</span> por Lucas Bobato</a></p>
     </footer>
 
+    <!-- Botão de volta ao topo -->
     <a class="back-to-top" href="#home">➤</a>
+
+     <!-- Scripts -->
+     <script>
+        // Script para fechar o menu
+        function closeMenu() {
+            document.getElementById('close-menu').checked = false;
+        }
+
+        // Event listener para fechar o menu ao clicar em itens
+        document.querySelectorAll('nav a').forEach(item => {
+            item.addEventListener('click', closeMenu)
+        });
+    </script>
+    
     </body>
 </html>

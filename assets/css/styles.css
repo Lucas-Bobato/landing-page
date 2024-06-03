@@ -148,7 +148,7 @@ a {
     /* top: -8rem; */
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: varp(--gap);
+    gap: var(--gap);
     min-height: 100vh;
 }
 
@@ -234,9 +234,9 @@ p {
 }
 
 .responsive-table {
-    overflow: hidden;
-    overflow-x: auto;
-  }
+  overflow-x: auto;
+}
+
   
   table {
     min-width: 360px;
@@ -430,4 +430,21 @@ p {
     .menu-spacing {
       display: none;
     }
+    .main-content {
+      padding: 5rem 2rem;
+    }
+    body {
+      font-size: 1.6rem;
+    }
+    .responsive-table table {
+  width: 100%;
+  max-width: 100%;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 0.3rem;
+  font-size: 1.4rem;
+}
+    
   }
